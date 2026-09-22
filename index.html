@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>American Dream Roleplay | Whitelisted FiveM Community</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        adrp: {
+                            bg: '#0D1117',
+                            card: '#161B22',
+                            paper: '#1F242D',
+                            border: '#30363D',
+                            red: '#DC2626',
+                            blue: '#2563EB',
+                            accentRed: '#EF4444',
+                            accentBlue: '#3B82F6',
+                            tape: 'rgba(255, 255, 255, 0.12)'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        handwritten: ['"Caveat"', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Handcrafted, organic styling additions */
+        .handcrafted-border {
+            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+        }
+        .handcrafted-border-sm {
+            border-radius: 12px 25px 10px 20px/20px 10px 25px 12px;
+        }
+        .tape-effect {
+            position: relative;
+        }
+        .tape-effect::before {
+            content: '';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%) rotate(-2deg);
+            width: 90px;
+            height: 24px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(2px);
+            border: 1px dashed rgba(255, 255, 255, 0.2);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            z-index: 20;
+        }
+        .american-text-gradient {
+            background: linear-gradient(135deg, #60A5FA 0%, #FFFFFF 50%, #F87171 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .ascii-box {
+            font-family: monospace;
+            white-space: pre-wrap;
+            letter-spacing: -0.5px;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0D1117;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #21262D;
+            border-radius: 5px;
+            border: 2px solid #0D1117;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #30363D;
+        }
+    </style>
+</head>
+<body class="bg-adrp-bg text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between relative overflow-x-hidden">
+
+    <!-- Handcrafted ambient background highlights -->
+    <div class="fixed inset-0 opacity-40 pointer-events-none z-0">
+        <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[140px]"></div>
+        <div class="absolute bottom-1/3 right-1/4 w-[500px] h-[500px] bg-red-600/10 rounded-full blur-[140px]"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-40 w-full bg-adrp-bg/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logo / Community Branding -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 bg-slate-800 border-2 border-slate-700 handcrafted-border-sm flex items-center justify-center text-white font-extrabold text-xl shadow-md group-hover:rotate-3 transition-transform">
+                    <span class="american-text-gradient">AD</span>
+                </div>
+                <div>
+                    <span class="text-xl font-extrabold tracking-tight text-white block leading-none font-sans">
+                        American Dream <span class="text-red-500">RP</span>
+                    </span>
+                    <span class="text-[11px] font-handwritten text-blue-400 font-bold tracking-wider uppercase">FiveM • Whitelisted Community</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-300">
+                <a href="#home" class="hover:text-blue-400 transition-colors">Home</a>
+                <a href="#rules" class="hover:text-blue-400 transition-colors">Rule Book</a>
+                <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
+                <a href="#faq" class="hover:text-blue-400 transition-colors">FAQ</a>
+            </nav>
+
+            <!-- CTA Actions -->
+            <div class="hidden md:flex items-center gap-3">
+                <a href="https://discord.gg/5WD8a3KZC" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-xl text-xs font-bold bg-indigo-600/20 hover:bg-indigo-600/30 text-indigo-300 border border-indigo-500/30 transition flex items-center gap-2">
+                    <i class="fa-brands fa-discord text-base"></i>
+                    <span>Discord</span>
+                </a>
+                <a href="application.html" class="px-5 py-2.5 rounded-xl text-xs font-bold bg-gradient-to-r from-red-600 to-blue-600 hover:from-red-500 hover:to-blue-500 text-white shadow-lg transition transform hover:-translate-y-0.5">
+                    Apply Now
+                </a>
+            </div>
+
+            <!-- Mobile Drawer Button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg bg-slate-800 text-slate-300 hover:text-white focus:outline-none">
+                <i class="fa-solid fa-bars text-lg"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-800 bg-adrp-card px-4 pt-3 pb-6 space-y-3">
+            <a href="#home" class="block py-2 text-slate-300 hover:text-white font-medium">Home</a>
+            <a href="#rules" class="block py-2 text-slate-300 hover:text-white font-medium">Rule Book</a>
+            <a href="#about" class="block py-2 text-slate-300 hover:text-white font-medium">About</a>
+            <a href="#faq" class="block py-2 text-slate-300 hover:text-white font-medium">FAQ</a>
+            <div class="pt-2 flex flex-col gap-2">
+                <a href="https://discord.gg/5WD8a3KZC" target="_blank" rel="noopener noreferrer" class="w-full text-center py-2.5 rounded-xl text-xs font-bold bg-indigo-600/20 text-indigo-300 border border-indigo-500/30 flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-discord"></i> Join Discord
+                </a>
+                <a href="application.html" class="w-full text-center py-2.5 rounded-xl text-xs font-bold bg-gradient-to-r from-red-600 to-blue-600 text-white shadow-md">
+                    Apply Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative z-10 flex-grow">
+        <!-- Hero Section -->
+        <section id="home" class="pt-12 pb-16 md:pt-20 md:pb-28 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <!-- Whitelisted Badge -->
+            <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-slate-800/90 border border-slate-700/80 text-xs font-bold text-slate-300 mb-8 shadow-sm handcrafted-border-sm transform -rotate-1">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span>Whitelisted Only Server</span>
+                <span class="text-slate-600">•</span>
+                <span class="text-blue-400">FiveM Community</span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold text-white tracking-tight leading-none mb-6">
+                American Dream <br class="hidden sm:inline" />
+                <span class="american-text-gradient font-black">Roleplay</span>
+            </h1>
+
+            <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed font-normal">
+                A community-driven FiveM server built by roleplayers, for roleplayers. Step into a world of serious storytelling, open freedom, and endless opportunity.
+            </p>
+
+            <!-- Hero Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
+                <a href="application.html" class="w-full sm:w-auto px-8 py-4 rounded-xl font-bold bg-gradient-to-r from-red-600 to-blue-600 hover:from-red-500 hover:to-blue-500 text-white shadow-xl transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2 group">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    <span>Apply for Whitelist</span>
+                </a>
+                
+                <a href="https://discord.gg/5WD8a3KZC" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 rounded-xl font-bold bg-slate-800 hover:bg-slate-700 text-slate-100 border border-slate-700 transition flex items-center justify-center gap-2.5">
+                    <i class="fa-brands fa-discord text-indigo-400 text-lg"></i>
+                    <span>Join Discord</span>
+                </a>
+            </div>
+
+            <!-- Handcrafted Note Banner -->
+            <div class="mt-14 inline-block tape-effect">
+                <div class="px-6 py-3 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-300 text-lg sm:text-xl font-handwritten flex items-center gap-3 shadow-lg transform rotate-1">
+                    <i class="fa-solid fa-heart text-red-500 text-base"></i>
+                    <span>"This server is a work in progress so please be patient! Love yall &lt;3"</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rule Book Section -->
+        <section id="rules" class="py-16 bg-slate-900/60 border-y border-slate-800/80 relative">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Section Header -->
+                <div class="text-center mb-12">
+                    <div class="inline-block px-3 py-1 rounded-md bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-extrabold uppercase tracking-widest mb-2">
+                        Community Standards
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Rule Book</h2>
+                    <p class="text-slate-400 text-sm mt-2 font-medium">Please review our rules carefully before applying or joining our Discord.</p>
+                </div>
+
+                <!-- Freedom of Speech Highlight Banner (Matching Discord output) -->
+                <div class="mb-10 p-6 rounded-2xl bg-slate-800/90 border-2 border-slate-700 shadow-xl handcrafted-border text-center relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-xl pointer-events-none"></div>
+                    <div class="absolute bottom-0 left-0 w-32 h-32 bg-red-500/10 rounded-full blur-xl pointer-events-none"></div>
+                    
+                    <span class="text-slate-400 font-mono text-xs block mb-1">====================================|</span>
+                    <h3 class="text-xl sm:text-2xl font-black text-amber-300 uppercase tracking-wide font-sans py-1">
+                        This is a server with Freedom of speech.
+                    </h3>
+                    <span class="text-slate-400 font-mono text-xs block mt-1">====================================|</span>
+                    <p class="text-slate-300 text-xs sm:text-sm mt-3 max-w-xl mx-auto leading-relaxed">
+                        We encourage organic roleplay and unscripted character interactions while ensuring hate speech and toxic harassment are strictly prohibited.
+                    </p>
+                </div>
+
+                <!-- Rules Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    
+                    <!-- Rule Item 1 -->
+                    <div class="bg-adrp-card p-6 rounded-2xl border border-slate-800 hover:border-blue-500/40 transition flex items-start gap-4 handcrafted-border-sm">
+                        <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-base flex-shrink-0">
+                            1
+                        </div>
+                        <div>
+                            <h4 class="text-base font-bold text-white mb-1">Keep everyone feeling welcome!</h4>
+                            <p class="text-slate-400 text-xs leading-relaxed">
+                                Treat fellow community members with basic kindness and hospitality. We aim to keep American Dream RP an inviting space for all players.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Rule Item 2 -->
+                    <div class="bg-adrp-card p-6 rounded-2xl border border-slate-800 hover:border-red-500/40 transition flex items-start gap-4 handcrafted-border-sm">
+                        <div class="w-10 h-10 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 flex items-center justify-center font-bold text-base flex-shrink-0">
+                            2
+                        </div>
+                        <div>
+                            <h4 class="text-base font-bold text-white mb-1">No racism / transphobia / Homophobia</h4>
+                            <p class="text-slate-400 text-xs leading-relaxed">
+                                Discrimination or hate speech targeting race, gender identity, or sexual orientation will lead to an immediate permanent ban without warning.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Rule Item 3 -->
+                    <div class="bg-adrp-card p-6 rounded-2xl border border-slate-800 hover:border-amber-500/40 transition flex items-start gap-4 handcrafted-border-sm">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-base flex-shrink-0">
+                            3
+                        </div>
+                        <div>
+                            <h4 class="text-base font-bold text-white mb-1">18+ only</h4>
+                            <p class="text-slate-400 text-xs leading-relaxed">
+                                All community members must be at least 18 years of age to ensure a mature roleplaying environment across both Discord and FiveM.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Rule Item 4 -->
+                    <div class="bg-adrp-card p-6 rounded-2xl border border-slate-800 hover:border-indigo-500/40 transition flex items-start gap-4 handcrafted-border-sm">
+                        <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-base flex-shrink-0">
+                            4
+                        </div>
+                        <div>
+                            <h4 class="text-base font-bold text-white mb-1">Follow discord TOS</h4>
+                            <p class="text-slate-400 text-xs leading-relaxed">
+                                Adhere strictly to Discord's official Terms of Service and Community Guidelines in all text and voice channels.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- About / Whitelist Details Section -->
+        <section id="about" class="py-16 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+                
+                <div class="lg:col-span-2">
+                    <span class="text-xs font-bold text-blue-400 uppercase tracking-widest block mb-1">Whitelisted RP</span>
+                    <h2 class="text-3xl font-extrabold text-white mb-4">Crafted for Storytellers</h2>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        American Dream Roleplay was created to give players a fresh, unrestrictive environment where decisions carry weight. We enforce a simple whitelist process to ensure high RP standards while maintaining a friendly, welcoming community.
+                    </p>
+                    <p class="text-slate-400 text-xs leading-relaxed mb-6">
+                        Whether you want to enforce law and order, build a legal business, or run the underground scene, you are free to write your own story here.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-semibold text-slate-200">
+                        <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-800/50 border border-slate-700/60">
+                            <i class="fa-solid fa-shield-halved text-blue-400"></i>
+                            <span>Whitelisted Entry</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-800/50 border border-slate-700/60">
+                            <i class="fa-solid fa-users text-emerald-400"></i>
+                            <span>18+ Mature Community</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-800/50 border border-slate-700/60">
+                            <i class="fa-solid fa-code text-amber-400"></i>
+                            <span>Active Development</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-800/50 border border-slate-700/60">
+                            <i class="fa-solid fa-comments text-indigo-400"></i>
+                            <span>Freedom of Speech</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Info Box Card -->
+                <div class="bg-adrp-card p-6 rounded-2xl border border-slate-800 shadow-xl text-center handcrafted-border-sm relative">
+                    <div class="w-12 h-12 bg-red-500/10 border border-red-500/20 text-red-400 rounded-xl flex items-center justify-center mx-auto mb-4 text-lg">
+                        <i class="fa-solid fa-file-pen"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-1">Ready to Apply?</h3>
+                    <p class="text-slate-400 text-xs mb-6">Applications are reviewed regularly by our staff team.</p>
+                    
+                    <a href="application.html" class="block w-full py-3 rounded-xl font-bold bg-gradient-to-r from-red-600 to-blue-600 hover:from-red-500 hover:to-blue-500 text-white text-xs shadow-md transition">
+                        Open Application Form
+                    </a>
+                    
+                    <button onclick="toggleModal()" class="block w-full py-2.5 mt-2 rounded-xl font-semibold bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs border border-slate-700 transition">
+                        View Whitelist Process
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FAQ Accordion Section -->
+        <section id="faq" class="py-12 bg-slate-900/40 border-t border-slate-800/80">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6">
+                <h2 class="text-2xl font-extrabold text-white text-center mb-8">Frequently Asked Questions</h2>
+                
+                <div class="space-y-3">
+                    <!-- FAQ Item 1 -->
+                    <div class="bg-adrp-card rounded-xl border border-slate-800 overflow-hidden">
+                        <button onclick="toggleFaq('faq1')" class="w-full p-4 text-left font-bold text-sm text-slate-200 flex justify-between items-center focus:outline-none">
+                            <span>How do I get Whitelisted?</span>
+                            <i id="faq1-icon" class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
+                        </button>
+                        <div id="faq1" class="hidden px-4 pb-4 text-xs text-slate-400 leading-relaxed border-t border-slate-800/60 pt-3">
+                            Click on the "Apply Now" button to fill out the application on application.html. After submitting, join our Discord server (https://discord.gg/5WD8a3KZC) to track your application status.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="bg-adrp-card rounded-xl border border-slate-800 overflow-hidden">
+                        <button onclick="toggleFaq('faq2')" class="w-full p-4 text-left font-bold text-sm text-slate-200 flex justify-between items-center focus:outline-none">
+                            <span>Is the server 18+ only?</span>
+                            <i id="faq2-icon" class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
+                        </button>
+                        <div id="faq2" class="hidden px-4 pb-4 text-xs text-slate-400 leading-relaxed border-t border-slate-800/60 pt-3">
+                            Yes, American Dream Roleplay strictly enforces an 18+ age requirement to ensure high quality and mature roleplay scenarios.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="bg-adrp-card rounded-xl border border-slate-800 overflow-hidden">
+                        <button onclick="toggleFaq('faq3')" class="w-full p-4 text-left font-bold text-sm text-slate-200 flex justify-between items-center focus:outline-none">
+                            <span>What does Freedom of Speech mean on this server?</span>
+                            <i id="faq3-icon" class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
+                        </button>
+                        <div id="faq3" class="hidden px-4 pb-4 text-xs text-slate-400 leading-relaxed border-t border-slate-800/60 pt-3">
+                            It means players are encouraged to speak naturally and engage in unscripted roleplay without excessive micromanagement. However, hate speech (racism, transphobia, homophobia) is strictly forbidden under Rule 2.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-adrp-bg border-t border-slate-800 py-8 text-slate-400 text-xs">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+            
+            <div class="flex items-center gap-3">
+                <div class="w-7 h-7 bg-slate-800 border border-slate-700 rounded-md flex items-center justify-center text-white font-bold text-xs">
+                    AD
+                </div>
+                <span class="font-bold text-slate-300">American Dream Roleplay</span>
+                <span>&copy; American Dream RP</span>
+            </div>
+
+            <div class="flex items-center gap-5">
+                <a href="https://discord.gg/5WD8a3KZC" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">
+                    <i class="fa-brands fa-discord text-base"></i>
+                </a>
+                <a href="application.html" class="hover:text-white transition-colors">Apply</a>
+                <a href="#rules" class="hover:text-white transition-colors">Rules</a>
+            </div>
+
+            <div class="text-slate-400 font-handwritten text-base">
+                "Work in progress • Love yall <i class="fa-solid fa-heart text-red-500 text-xs"></i>"
+            </div>
+        </div>
+    </footer>
+
+    <!-- Whitelist Process Modal -->
+    <div id="infoModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm hidden">
+        <div class="bg-adrp-card border border-slate-700 rounded-2xl max-w-md w-full p-6 shadow-2xl relative">
+            <button onclick="toggleModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <h3 class="text-xl font-bold text-white mb-2">Whitelist Process</h3>
+            <p class="text-slate-300 text-xs mb-4">Follow these simple steps to join our server:</p>
+            
+            <ol class="space-y-3 text-xs text-slate-300">
+                <li class="flex items-start gap-3">
+                    <span class="w-5 h-5 rounded-full bg-blue-600 text-white flex items-center justify-center text-[10px] font-bold flex-shrink-0 mt-0.5">1</span>
+                    <span>Join our Discord server: <a href="https://discord.gg/5WD8a3KZC" target="_blank" class="text-blue-400 underline font-semibold">discord.gg/5WD8a3KZC</a></span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="w-5 h-5 rounded-full bg-blue-600 text-white flex items-center justify-center text-[10px] font-bold flex-shrink-0 mt-0.5">2</span>
+                    <span>Read all community rules carefully.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="w-5 h-5 rounded-full bg-blue-600 text-white flex items-center justify-center text-[10px] font-bold flex-shrink-0 mt-0.5">3</span>
+                    <span>Submit your application via <a href="application.html" class="text-red-400 underline font-semibold">application.html</a>.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="w-5 h-5 rounded-full bg-blue-600 text-white flex items-center justify-center text-[10px] font-bold flex-shrink-0 mt-0.5">4</span>
+                    <span>Wait for a staff member to review your application in Discord.</span>
+                </li>
+            </ol>
+
+            <button onclick="toggleModal()" class="w-full mt-6 py-2.5 rounded-xl bg-slate-800 text-slate-200 font-bold text-xs hover:bg-slate-700 transition">
+                Got it
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Drawer Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // FAQ Toggle Logic
+        function toggleFaq(id) {
+            const el = document.getElementById(id);
+            const icon = document.getElementById(id + '-icon');
+            if (el.classList.contains('hidden')) {
+                el.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                el.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        // Whitelist Modal Toggle
+        function toggleModal() {
+            const modal = document.getElementById('infoModal');
+            modal.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
